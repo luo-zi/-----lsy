@@ -1,0 +1,156 @@
+ body {
+     height: 100vh;
+     /*1vh 等于 1%的视口宽度 */
+ }
+ 
+ .header {
+     width: 100%;
+     height: 5vh;
+     background: rgba(251, 130, 0, 0.574);
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+ }
+ /* 搜索框开始 */
+ 
+ button,
+ input {
+     border: 0;
+     outline: none;
+ }
+ 
+ * {
+     margin: 0;
+     padding: 0;
+     /* box-sizing: border-box; */
+ }
+ 
+ .movie {
+     position: absolute;
+     width: 625px;
+     height: 55px;
+     border: 2px solid #000000;
+     /* position: absolute; */
+     /* left: 0; */
+     /* right: 0; */
+     /* top: 0; */
+     /* bottom: 0; */
+     /* 水平居中 */
+     /* margin: 0 auto; */
+     align-self: center;
+ }
+ 
+ .movie button {
+     float: left;
+     width: 90px;
+     height: 51px;
+     background-color: #000000;
+     font-size: 16px;
+     color: #fff;
+ }
+ 
+ .movie input {
+     float: left;
+     width: 531px;
+     height: 51px;
+     padding-left: 10px;
+     padding: 0 10px;
+     font-size: 14px;
+     line-height: 50px;
+     /* border: 1px solid #e0e0e0; */
+     outline: none;
+     transition: all 0.3s;
+ }
+ 
+ .movie .search {
+     /* border: 1px solid #000000; */
+ }
+ /* 搜索框结束 */
+ 
+ .container {
+     height: 95%;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     border-style: solid;
+ }
+ 
+ .banner {
+     list-style-type: none;
+     width: 93.5vw;
+     height: 15vh;
+     background-color: rgb(252, 252, 252);
+     border-style: solid;
+     margin-left: 10px;
+ }
+ 
+ .synopsis {
+     margin-top: 17px;
+     list-style-type: none;
+     height: 77vh;
+     border-style: solid;
+     margin: 10px
+ }
+ 
+ .navbar {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     width: 150px;
+     background-color: rgba(251, 130, 0, 0.574);
+     border-style: rgba(251, 130, 0, 0.574);
+     height: 100%;
+     width: 5vw;
+     /*导航栏长度占据整个屏幕*/
+     /* position: fixed; */
+     /*导航栏相对屏幕的位置固定*/
+ }
+ 
+ .navbar li a {
+     text-decoration: none;
+     color: rgb(255, 255, 255);
+     padding: 30px 0px;
+     /*适当增加一些填充空间，使各列表项适当分开*/
+     display: block;
+     /*各项以block形式显示*/
+     text-align: center;
+     /*文本位于block中央区域*/
+     font-weight: bold;
+ }
+ 
+ .navbar li a:hover {
+     /*如果鼠标放在栏目上，执行的变化*/
+     background-color: black;
+     /*背景变为黑色*/
+     color: white;
+     /*字体变为白色*/
+ }
+ 
+ .login li {
+     list-style-type: none;
+     /* float: right; */
+     height: 46px;
+     line-height: 46px;
+     cursor: pointer;
+ }
+ 
+ .login {
+     align-self: flex-end;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+ }
+ 
+ .header ul li a {
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 20px;
+ }
+ 
+ .login li a:hover {}
+ 
+ .mainContent {
+     height: 100%;
+     width: 95vw;
+ }
