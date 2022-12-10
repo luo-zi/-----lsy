@@ -1,6 +1,6 @@
- body {
+ /* body {
      height: 100vh;
-     /*1vh 等于 1%的视口宽度 */
+     
  }
  
  .header {
@@ -11,7 +11,7 @@
      flex-direction: column;
      flex-wrap: nowrap;
  }
- /* 搜索框开始 */
+ 
  
  button,
  input {
@@ -22,7 +22,7 @@
  * {
      margin: 0;
      padding: 0;
-     /* box-sizing: border-box; */
+     
  }
  
  .movie {
@@ -30,13 +30,13 @@
      width: 625px;
      height: 55px;
      border: 2px solid #000000;
-     /* position: absolute; */
-     /* left: 0; */
-     /* right: 0; */
-     /* top: 0; */
-     /* bottom: 0; */
-     /* 水平居中 */
-     /* margin: 0 auto; */
+     
+     
+     
+     
+     
+     
+     
      align-self: center;
  }
  
@@ -57,15 +57,15 @@
      padding: 0 10px;
      font-size: 14px;
      line-height: 50px;
-     /* border: 1px solid #e0e0e0; */
+     
      outline: none;
      transition: all 0.3s;
  }
  
  .movie .search {
-     /* border: 1px solid #000000; */
+     
  }
- /* 搜索框结束 */
+ 
  
  .container {
      height: 95%;
@@ -102,34 +102,34 @@
      border-style: rgba(251, 130, 0, 0.574);
      height: 100%;
      width: 5vw;
-     /*导航栏长度占据整个屏幕*/
-     /* position: fixed; */
-     /*导航栏相对屏幕的位置固定*/
+     
+     
+     
  }
  
  .navbar li a {
      text-decoration: none;
      color: rgb(255, 255, 255);
      padding: 30px 0px;
-     /*适当增加一些填充空间，使各列表项适当分开*/
+     
      display: block;
-     /*各项以block形式显示*/
+     
      text-align: center;
-     /*文本位于block中央区域*/
+     
      font-weight: bold;
  }
  
  .navbar li a:hover {
-     /*如果鼠标放在栏目上，执行的变化*/
+     
      background-color: black;
-     /*背景变为黑色*/
+     
      color: white;
-     /*字体变为白色*/
+     
  }
  
  .login li {
      list-style-type: none;
-     /* float: right; */
+     
      height: 46px;
      line-height: 46px;
      cursor: pointer;
@@ -153,4 +153,120 @@
  .mainContent {
      height: 100%;
      width: 95vw;
+ } */
+
+ /*  
+ [x] body 大小
+ [x] header container 大小和位置
+ [x] movie login 大小和位置
+ [x] navbar mainContent 大小和位置
+[] li a banner synopsis 大小和位置
+ */
+
+/* 层级 0 */
+
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+ }
+
+ /* 层级 1 */
+
+ .header{
+    height: 15vh;
+    width: 100%;
+    flex-basis: 10vh;
+    flex-shrink: 0;
+    /* 为movie 设置位置 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(251, 130, 0, 0.574);
+ }
+ .container{
+    height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ /* 层级 2 */
+
+ .movie{
+    width: 45%;
+    flex-basis: 45%;
+
+    display: flex;
+    flex-direction: row;
+
+    
+ }
+ .login{
+    width: 15%;
+    flex-basis: 15%;
+    display: flex;
+ }
+
+.navbar{
+    flex-basis: 10%;
+    flex-shrink: 0;
+}
+.mainContent{
+    flex-basis: 90%;
+}
+
+/* 各种小调整 */
+
+li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+}
+.header li a{
+    
+    cursor: pointer;
+    font-weight: bold;
+}
+.movie button{
+    background-color: #000000;
+     font-size: 1.4em;
+     color: #fff;
+
+}
+.movie input{
+    font-size: 1.5em;
+    outline: none;
+     transition: all 0.3s;
+}
+.navbar {
+    background-color: rgba(251, 130, 0, 0.574);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.navbar li a {
+     color: rgb(255, 255, 255);
+     padding: 30px 0px;
+     
+     display: block;
+     
+     text-align: center;
+     
+     font-weight: bold;
+ }
+
+ .navbar li a:hover {
+     
+     background-color: black;
+     
+     color: white;
+     
  }
