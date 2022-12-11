@@ -106,7 +106,7 @@
  justify-content: space-around; -> 与两边保持间距, 项目间保持间距
  align-items: center; -> 纵向居中
  ==>
- 完全的居中
+ 保持其纵向居中的同时使得login中的项不贴边居右
  */
 
 .navbar{
