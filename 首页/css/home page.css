@@ -1,10 +1,35 @@
- /*  
- [x] body 大小
- [x] header container 大小和位置
- [x] movie login 大小和位置
- [x] navbar mainContent 大小和位置
-[] li a banner synopsis 大小和位置
+/* 层级记录表
+ * 层级0: body
+ * 层级1: header container
+ * 层级2: movie login navbar mainContent
+ *
  */
+
+
+/* 属性解释
+ * flex-basis: 用于指出这个容器在父容器中应当占用多少空间 
+ * justify-content: space-between; 使得本(flex)容器中的内容按 最左 居中 最右 的方式排布, 通过在html加入了一个空div(占用了左) 使得搜索框居中, login 居右
+ * 
+ /
+
+
+ /* 开发守则
+  * 按以下顺序进行:
+  * 1. 在层级记录表中记录要开发的层级, 检查上一层的相关元素的大小和位置完成情况
+  * 2. 根据层级记录表, 编写css代码, 确定其大小和位置( 位置通常使用flex布局来实现, 所以flex属性大多应视为位置的实现)
+  * 3. 根据层级记录表, 编写代码, 对其字体, 颜色, 光标样式,下划线, 划过和点击时的变化进行实现.
+  * 4. 编写注释, 对于那些多个属性互相配合产生的效果, 应列出单个属性 -> 单个效果, 最后以==>来总结其组合效果
+  Example:
+
+  justify-content: space-between ->使得本(flex)容器中的内容按 最左 居中 最右 的方式排布
+  一个空div ->占用其居左空位
+  movie login 与 空div 并列
+  ==> 
+  movie 居中显示 
+  login 居右显示
+  */
+
+
 
 /* 层级 0 */
 
@@ -19,37 +44,52 @@
     width: 100%;
  }
 
- /* 层级 1 */
+
+
+ /* 层级 1 大小 位置*/
 
  .header{
     height: 2.6em;
     width: 100%;
     flex-basis: 7vh;
     flex-shrink: 0;
-    /* 为movie 设置位置 */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    background: rgba(251, 130, 0, 0.574);
  }
+
  .container{
     height: 93vh;
     display: flex;
     flex-wrap: wrap;
  }
 
- /* 层级 2 */
 
+  /* 层级 1 调整*/
+  .header{
+    /* 为movie 设置位置 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+ .header{
+    background: rgba(251, 130, 0, 0.574);
+}
+
+.header li a{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+ /* 层级 2  大小 位置*/
+ 
  .movie{
     width: 44%;
     flex-basis: 44%;
 
     display: flex;
-    flex-direction: row;
-
-    
  }
+
  .login{
     height: 100%;
     width: 17%;
@@ -58,6 +98,12 @@
     justify-items: center;
     align-items: center;
  }
+ /* 
+ justify-items: center; -> 横向居中
+ align-items: center; -> 纵向居中
+ ==>
+ 完全的居中
+ */
 
 .navbar{
     
@@ -68,19 +114,9 @@
     flex-basis: 93%;
 }
 
-/* 各种小调整 */
 
-li{
-    list-style-type: none;
-}
-li a{
-    text-decoration: none;
-}
-.header li a{
-    
-    cursor: pointer;
-    font-weight: bold;
-}
+
+/* 层级2-3 调整 */
 .movie button{
     background-color: #000000;
      font-size: 1em;
@@ -89,6 +125,13 @@ li a{
      flex-basis: 15%;
      flex-shrink: 0;
 }
+/* 
+
+flex-basis: 15%; -> 默认占用15%的空间
+flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
+==>
+使按钮占用的空间始终是15%, 因为按钮再小的话很容易变得难看
+*/
 .movie input{
     flex-basis: 85%;
     /* height: 3em; */
@@ -102,7 +145,8 @@ li a{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; 
+    /* 使其 子项目 之间保持一点间距, 与两端也保持一点间距 */
 }
 .navbar li a {
      color: rgb(255, 255, 255);
@@ -122,3 +166,16 @@ li a{
      color: white;
      
  }
+
+
+
+/* 各种小调整 */
+
+li{
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+}
+
+
