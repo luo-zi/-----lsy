@@ -103,7 +103,7 @@
     align-items:center;
  }
  /* 
- justify-items: center; -> 横向居中
+ justify-content: space-around; -> 与两边保持间距, 项目间保持间距
  align-items: center; -> 纵向居中
  ==>
  完全的居中
