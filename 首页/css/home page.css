@@ -117,6 +117,9 @@
 
 
 /* 层级2-3 调整 */
+.login{
+    flex-direction: row-reverse;
+}
 .movie button{
     background-color: #000000;
      font-size: 1em;
