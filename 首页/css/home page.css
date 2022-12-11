@@ -82,12 +82,16 @@
 
 
  /* 层级 2  大小 位置*/
- 
+#emptyDiv{
+    width: 15%;
+    flex-basis: 15%;
+ }
  .movie{
     width: 44%;
     flex-basis: 44%;
     height: 100%;
     display: flex;
+    justify-content: center;
  }
 
  .login{
