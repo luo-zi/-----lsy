@@ -86,7 +86,7 @@
  .movie{
     width: 44%;
     flex-basis: 44%;
-
+    height: 100%;
     display: flex;
  }
 
@@ -135,7 +135,7 @@ flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
 .movie input{
     flex-basis: 85%;
     /* height: 3em; */
-    height: 2.6em;
+    height: 100%;
     font-size: inherit;
     outline: none;
      transition: all 0.3s;
