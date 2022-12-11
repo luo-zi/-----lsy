@@ -96,11 +96,11 @@
 
  .login{
     height: 100%;
-    width: 17%;
-    flex-basis: 18%;
+    width: 10%;
+    flex-basis: 10%;
     display: flex;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-around ;
+    align-items:center;
  }
  /* 
  justify-items: center; -> 横向居中
