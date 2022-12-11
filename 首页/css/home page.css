@@ -64,7 +64,7 @@
 
   /* 层级 1 调整*/
   .header{
-    /* 为movie 设置位置 */
+    /* 为下个层次的movie 设置位置 所以写在了调整中*/
     display: flex;
     align-items: center;
     justify-content: space-between;
