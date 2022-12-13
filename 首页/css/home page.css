@@ -2,7 +2,9 @@
  * 层级0: body
  * 层级1: header container
  * 层级2: movie login navbar mainContent
- *
+ * 层级3: mainContent-top mainContent-bottom
+ * 层级4：lunbo recommend
+ * 层级5：list synopsis
  */
 
 
@@ -30,108 +32,175 @@
   */
 
 
-
 /* 层级 0 */
 
- *{
+* {
     margin: 0;
     padding: 0;
- }
- body{
+}
+
+body {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
- }
+}
 
 
+/* 层级 1 大小 位置*/
 
- /* 层级 1 大小 位置*/
-
- .header{
+.header {
     height: 2.6em;
     width: 100%;
     flex-basis: 7vh;
     flex-shrink: 0;
- }
+}
 
- .container{
+.container {
+    width: 100%;
     height: 93vh;
+}
+
+
+/* 层级 1 调整*/
+
+.container {
     display: flex;
     flex-wrap: wrap;
- }
+}
 
-
-  /* 层级 1 调整*/
-  .header{
+.header {
     /* 为下个层次的movie 设置位置 所以写在了调整中*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
- }
- .header{
+}
+
+.header {
     background: rgba(251, 130, 0, 0.574);
 }
 
-.header li a{
+.header li a {
     cursor: pointer;
     font-weight: bold;
 }
 
 
+/* 层级 2  大小 位置*/
 
- /* 层级 2  大小 位置*/
-#emptyDiv{
+#idon {
     width: 15%;
     flex-basis: 15%;
- }
- .movie{
+    flex-shrink: 0;
+    /* 禁止自动缩小， 保护logo和网站名 */
+}
+
+.movie {
     width: 44%;
-    flex-basis: 44%;
+    flex-basis: 47%;
     height: 100%;
     display: flex;
     justify-content: center;
- }
+}
 
- .login{
+.login {
     height: 100%;
     width: 10%;
     flex-basis: 10%;
     display: flex;
-    justify-content: space-around ;
-    align-items:center;
- }
- /* 
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* 
  justify-content: space-around; -> 与两边保持间距, 项目间保持间距
  align-items: center; -> 纵向居中
  ==>
  保持其纵向居中的同时使得login中的项不贴边居右
  */
 
-.navbar{
-    
+.navbar {
     flex-basis: 6%;
     flex-shrink: 0;
 }
-.mainContent{
-    flex-basis: 93%;
+
+.mainContent {
+    width: 100%;
+    flex-basis: 94%;
 }
 
+
+/* .list {
+    width: 40%;
+    height: 100%;
+    border: 1px solid #e8e8e8;
+}
+
+.list * {
+    font: normal 24px/36px "黑体", Verdana, Lucida, Arial, Helvetica, sans-serif;
+}
+
+.list h1 {
+    height: 30px;
+    text-indent: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #cb1a1a;
+}
+
+.list ol {
+    height: 50%;
+    padding-left: 26px;
+    list-style: none;
+    background-color: rgba(251, 130, 0, 0.263);
+}
+
+.list li {
+    width: 100%;
+    height: 30px;
+    list-style: decimal;
+}
+
+.list li span {
+    color: #cccccc;
+    padding-left: 100px;
+}
+
+.list a {
+    color: black;
+    text-decoration: none;
+} */
 
 
 /* 层级2-3 调整 */
-.login{
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* justify-content: space-around; */
+}
+
+#idon {
+    white-space: nowrap;
+    /* 禁止自动缩小， 保护logo和网站名 */
+}
+
+.login {
     flex-direction: row-reverse;
 }
-.movie button{
+
+.movie button {
     background-color: #000000;
-     font-size: 1em;
-     color: #fff;
-     /* flex-basis: 100%; */
-     flex-basis: 15%;
-     flex-shrink: 0;
+    font-size: 1em;
+    color: #fff;
+    /* flex-basis: 100%; */
+    flex-basis: 15%;
+    flex-shrink: 0;
 }
+
+
 /* 
 
 flex-basis: 15%; -> 默认占用15%的空间
@@ -139,50 +208,109 @@ flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
 ==>
 使按钮占用的空间始终是15%, 因为按钮再小的话很容易变得难看
 */
-.movie input{
+
+.movie input {
     flex-basis: 85%;
     /* height: 3em; */
     height: 100%;
     font-size: inherit;
     outline: none;
-     transition: all 0.3s;
+    transition: all 0.3s;
 }
+
 .navbar {
     background-color: rgba(251, 130, 0, 0.574);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around; 
+    justify-content: space-around;
     /* 使其 子项目 之间保持一点间距, 与两端也保持一点间距 */
 }
+
 .navbar li a {
-     color: rgb(255, 255, 255);
-     padding: 30px 0px;
-     
-     display: block;
-     
-     text-align: center;
-     
-     font-weight: bold;
- }
+    color: rgb(255, 255, 255);
+    padding: 30px 0px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
 
- .navbar li a:hover {
-     
-     background-color: black;
-     
-     color: white;
-     
- }
+.navbar li a:hover {
+    background-color: black;
+    color: white;
+}
 
+
+/* 层级3 大小和位置 */
+
+.mainContent-top {
+    width: 100%;
+    flex-basis: 45%;
+    flex-shrink: 0;
+}
+
+.mainContent-bottom {
+    width: 100%;
+    flex-basis: 55%;
+}
+
+
+/* 层级3 调整 */
+
+.mainContent-top {
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.mainContent-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* 层级4 大小和位置 */
+
+.lunbo {
+    width: 90%;
+    flex-basis: 90%;
+}
+
+.recommend {
+    width: 90%;
+    height: 100%;
+    flex-basis: 90%;
+}
+
+
+/* 层级4 调整 */
+
+.recommend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/* 层级5 大小和位置 */
+
+.list {
+    flex-basis: 30%;
+}
+
+.synopsis {
+    flex-basis: 50%;
+}
 
 
 /* 各种小调整 */
 
-li{
+li {
     list-style-type: none;
 }
-li a{
+
+li a {
     text-decoration: none;
 }
-
-
