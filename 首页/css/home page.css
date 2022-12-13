@@ -4,7 +4,8 @@
  * 层级2: movie login navbar mainContent
  * 层级3: mainContent-top mainContent-bottom
  * 层级4：lunbo recommend
- * 层级5：list synopsis
+ * 层级5：list synopsis lunbo-list lunbo-button-list
+ * 层级6" lunbo-list-item lunbo-button-item
  */
 
 
@@ -245,8 +246,11 @@ flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
 
 .mainContent-top {
     width: 100%;
+    max-width: 100%;
+    max-height: 45%;
     flex-basis: 45%;
     flex-shrink: 0;
+    flex-grow: 0;
 }
 
 .mainContent-bottom {
@@ -287,6 +291,14 @@ flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
 
 /* 层级4 调整 */
 
+.lunbo {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
 .recommend {
     display: flex;
     flex-wrap: wrap;
@@ -304,6 +316,126 @@ flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
     flex-basis: 50%;
 }
 
+.lunbo-list {
+    height: 100%;
+    width: 400%;
+    
+}
+.lunbo-button-list{
+    width: inherit;
+    height: 10%;
+    position: absolute;
+    left: 5%;
+    bottom: 1%;
+}
+
+/* 层级5 调整 */
+
+.lunbo-list {
+    display: flex;
+    animation: move 5s ease 1s infinite both;
+    
+}
+.lunbo-list:hover{
+    animation-play-state: paused;
+}
+.lunbo-list-animation{
+    animation: move 5s ease 1s infinite both;
+}
+
+.img1{
+    animation: img1 1s ease  both;
+}
+.img2{
+    animation: img2 1s ease  both;
+}
+.img3{
+    animation: img3 1s ease  both;
+}
+
+
+@keyframes img1{
+    
+    100%{
+        transform: translate(0%);
+    }
+}
+@keyframes img2{
+    0%{
+        transform: translateX(-20%);
+    }
+    100%{
+        transform: translate(-25%);
+    }
+}
+@keyframes img3{
+    0%{
+        transform: translate(-45%);
+    }
+    100%{
+        transform: translate(-50%);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0%);
+        
+    }
+   25% {
+        transform: translate(-25%);
+        
+    }
+    50%{
+        transform: translate(-50%);
+        
+    }
+    100% {
+        transform: translate(-75%);
+        
+    }
+}
+
+.lunbo-button-list{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    flex-basis: 100%;
+    flex-grow: 1%;
+    align-self: flex-start;
+}
+
+/* 层级6 大小和位置 */
+
+.lunbo-list-item {
+    width: 300%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.lunbo-button-item{
+    box-sizing: border-box;
+    width: .8rem;
+    height: .8rem;
+    margin-right: 5em;
+
+}
+
+/* 层级6 调整 */
+
+
+.lunbo-list-item img {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+.lunbo-button-item{
+    border-radius: 50%;
+    border: .1rem solid #fff;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
 
 /* 各种小调整 */
 
