@@ -142,7 +142,6 @@ body {
     height: 100%;
     width: 20%;
     flex-basis: 20%;
-   
 }
 
 
@@ -222,10 +221,12 @@ body {
     align-items: center;
     flex-shrink: 0;
 }
-.login>li{
+
+.login>li {
     flex-basis: 35%;
     flex-shrink: 0;
 }
+
 .login>li>a {
     white-space: nowrap;
 }
@@ -492,7 +493,7 @@ flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
     
     background-color: #fffefa53;
 }
-.list-content>ol{
+.list-content>ol {
     display: flex;
     flex-direction: column;
     gap: 3vh;
@@ -538,18 +539,16 @@ flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
     max-height: 128px;
     max-width: 100px;
 }
-.synopsis-content>li>p{
+.synopsis-content>li>p {
     flex-basis: 80%;
     flex-grow: 0;
-
 }
 .synopsis-content>li>p::first-line {
-   
-        font-size: 2em;
-        padding: 0.1em;
-        color: #000000;
-        vertical-align: middle;
-        line-height: 1.5em;
+    font-size: 2em;
+    padding: 0.1em;
+    color: #000000;
+    vertical-align: middle;
+    line-height: 1.5em;
 }
 
 /* 各种小调整 */
