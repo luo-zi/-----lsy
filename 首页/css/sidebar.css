@@ -1,13 +1,13 @@
 /* 垂直侧边栏 */
 
 /* 
- * navbar
+ * sidebar
  *
 */
 
 
 /* 大小 位置 */
-.navbar {
+.sidebar {
     flex-basis: 6%;
     flex-shrink: 0;
     position: fixed;
@@ -17,7 +17,7 @@
 
 /* 调整 */
 
-.navbar {
+.sidebar {
     background-color: #fdac4e;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
     /* 使其 子项目 之间保持一点间距, 与两端也保持一点间距 */
 }
 
-.navbar li a {
+.sidebar li a {
     color: rgb(255, 255, 255);
     padding: 43px 5px;
     display: block;
@@ -35,7 +35,7 @@
     z-index: -1;
 }
 
-.navbar li a:hover {
+.sidebar li a:hover {
     background-color: black;
     color: white;
     

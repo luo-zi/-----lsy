@@ -2,7 +2,7 @@
 
 
 /*  
- * header
+ * navbar
  * idon movie login
  * 
 */
@@ -10,7 +10,7 @@
 
 /* 大小 位置 */
 
-.header {
+.navbar {
     width: 99vw;
     flex-basis: 7vh;
     flex-shrink: 0;
@@ -38,7 +38,7 @@
 
 /* 调整 */
 
-.header {
+.navbar {
     /* 为下个层次的movie 设置位置 所以写在了调整中*/
     display: flex;
     align-items: center;
@@ -47,7 +47,7 @@
     z-index: 2;
 }
 
-.header li a {
+.navbar li a {
     cursor: pointer;
     font-weight: bold;
 }
