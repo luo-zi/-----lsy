@@ -58,11 +58,7 @@ body {
 
 /* 层级 1 大小 位置*/
 
-.header {
-    width: 99vw;
-    flex-basis: 7vh;
-    flex-shrink: 0;
-}
+
 
 .container {
     width: 100%;
@@ -85,18 +81,9 @@ body {
     justify-content: center;
 }
 
-.header {
-    /* 为下个层次的movie 设置位置 所以写在了调整中*/
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(251, 130, 0, 0.574);
-}
 
-.header li a {
-    cursor: pointer;
-    font-weight: bold;
-}
+
+
 
 .navbar {
     background-color: rgba(251, 130, 0, 0.574);
@@ -123,82 +110,11 @@ body {
 
 /* 层级 2  大小 位置*/
 
-#idon {
-    width: 15%;
-    flex-basis: 15%;
-    flex-shrink: 0;
-    /* 禁止自动缩小， 保护logo和网站名 */
-}
-
-.movie {
-    width: 35%;
-    flex-basis: 35%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.login {
-    height: 100%;
-    width: 20%;
-    flex-basis: 15%;
-}
-
-
-/* 
- justify-content: space-around; -> 与两边保持间距, 项目间保持间距
- align-items: center; -> 纵向居中
- ==>
- 保持其纵向居中的同时使得login中的项不贴边居右
- */
 
 .mainContent {
     width: 100%;
     flex-basis: 90%;
 }
-
-
-/* .list {
-    width: 40%;
-    height: 100%;
-    border: 1px solid #e8e8e8;
-}
-
-.list * {
-    font: normal 24px/36px "黑体", Verdana, Lucida, Arial, Helvetica, sans-serif;
-}
-
-.list h1 {
-    height: 30px;
-    text-indent: 15px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #cb1a1a;
-}
-
-.list ol {
-    height: 50%;
-    padding-left: 26px;
-    list-style: none;
-    background-color: rgba(251, 130, 0, 0.263);
-}
-
-.list li {
-    width: 100%;
-    height: 30px;
-    list-style: decimal;
-}
-
-.list li span {
-    color: #cccccc;
-    padding-left: 100px;
-}
-
-.list a {
-    color: black;
-    text-decoration: none;
-} */
-
 
 /* 层级2-3 调整 */
 
@@ -210,57 +126,9 @@ body {
     /* justify-content: space-around; */
 }
 
-#idon {
-    white-space: nowrap;
-    /* 禁止自动缩小， 保护logo和网站名 */
-}
-
-.login {
-    flex-direction: row-reverse;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.login>li {
-    flex-basis: 35%;
-    flex-shrink: 0;
-}
-
-.login>li>a {
-    white-space: nowrap;
-}
-
-.login>li {
-    flex-shrink: 0;
-}
-
-.movie button {
-    background-color: #000000;
-    font-size: 1em;
-    color: #fff;
-    /* flex-basis: 100%; */
-    flex-basis: 15%;
-    flex-shrink: 0;
-}
 
 
-/* 
 
-flex-basis: 15%; -> 默认占用15%的空间
-flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
-==>
-使按钮占用的空间始终是15%, 因为按钮再小的话很容易变得难看
-*/
-
-.movie input {
-    flex-basis: 85%;
-    /* height: 3em; */
-    height: 100%;
-    font-size: inherit;
-    outline: none;
-    transition: all 0.3s;
-}
 
 
 /* 层级3 大小和位置 */
