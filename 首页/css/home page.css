@@ -58,14 +58,10 @@ body {
 
 /* 层级 1 大小 位置*/
 
-
-
 .container {
     width: 100%;
     height: 93vh;
 }
-
-
 
 
 /* 层级 1 调整*/
@@ -77,16 +73,13 @@ body {
 }
 
 
-
-
-
 /* 层级 2  大小 位置*/
-
 
 .mainContent {
     width: 100%;
     flex-basis: 90%;
 }
+
 
 /* 层级2-3 调整 */
 
@@ -95,12 +88,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-self: center;
-    /* justify-content: space-around; */
 }
-
-
-
-
 
 
 /* 层级3 大小和位置 */
@@ -126,7 +114,6 @@ body {
 .mainContent-top {
     display: flex;
     flex-direction: column-reverse;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -210,7 +197,8 @@ body {
 .list {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 2vh; 
+    /* gap flex下更好的间距产生方法 */
     justify-content: flex-start;
 }
 
@@ -220,12 +208,6 @@ body {
     gap: 2vh;
     justify-content: flex-start;
 }
-
-
-/* .list>div{
-    flex-basis: 1%;
-    flex-grow: 0;
-} */
 
 .lunbo-list {
     display: flex;
@@ -252,6 +234,7 @@ body {
     animation: img3 1s ease both;
 }
 
+/* 切图动画 分别对应1-3图 */
 @keyframes img1 {
     100% {
         transform: translate(0%);
@@ -276,6 +259,7 @@ body {
     }
 }
 
+/* 轮播动画 */
 @keyframes move {
     0% {
         transform: translate(0%);
@@ -296,7 +280,7 @@ body {
     justify-content: center;
     z-index: 1;
     flex-basis: 100%;
-    flex-grow: 1%;
+    flex-grow: 0;
     align-self: flex-start;
 }
 
@@ -312,7 +296,7 @@ body {
 }
 
 .lunbo-list-item {
-    width: 300%;
+    width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
@@ -329,8 +313,6 @@ body {
 /* 层级6 调整 */
 
 .list-tittle {
-    /* display: block; */
-    /* border-bottom: 0.1em solid #000000 ; */
     font-weight: bold;
     font-size: 2em;
     white-space: nowrap;
@@ -367,7 +349,6 @@ body {
 /* 层级7 调整 */
 
 .list-content {
-    /* box-shadow: 0 0 10px #dbc390 ; */
     background-color: #fffefa53;
 }
 
@@ -390,8 +371,6 @@ body {
     width: 100%;
     height: 1.8em;
     justify-content: space-between;
-    list-style-type: decimal;
-    list-style-position: inside;
 }
 
 .list-content>ol>li>span {
@@ -404,7 +383,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* box-shadow: 0 0 10px #dbc390 ; */
     background-color: #fffefa53;
     gap: 5vh;
 }
@@ -416,7 +394,6 @@ body {
 }
 
 .synopsis-content>li>img {
-    /* TEST */
     height: 128px;
     width: 100px;
     max-height: 128px;
