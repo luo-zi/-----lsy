@@ -1,0 +1,43 @@
+/* 垂直侧边栏 */
+
+/* 
+ * navbar
+ *
+*/
+
+
+/* 大小 位置 */
+.navbar {
+    flex-basis: 6%;
+    flex-shrink: 0;
+    position: fixed;
+    top: 7vh;
+}
+
+
+/* 调整 */
+
+.navbar {
+    background-color: #fdac4e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-shrink: 0;
+    /* 使其 子项目 之间保持一点间距, 与两端也保持一点间距 */
+}
+
+.navbar li a {
+    color: rgb(255, 255, 255);
+    padding: 43px 5px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    z-index: -1;
+}
+
+.navbar li a:hover {
+    background-color: black;
+    color: white;
+    
+}
+

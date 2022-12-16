@@ -43,7 +43,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(251, 130, 0, 0.574);
+    background: #fdac4e;
+    z-index: 2;
 }
 
 .header li a {
