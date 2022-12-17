@@ -197,7 +197,7 @@ body {
 .list {
     display: flex;
     flex-direction: column;
-    gap: 2vh; 
+    gap: 2vh;
     /* gap flex下更好的间距产生方法 */
     justify-content: flex-start;
 }
@@ -234,7 +234,9 @@ body {
     animation: img3 1s ease both;
 }
 
+
 /* 切图动画 分别对应1-3图 */
+
 @keyframes img1 {
     100% {
         transform: translate(0%);
@@ -259,7 +261,9 @@ body {
     }
 }
 
+
 /* 轮播动画 */
+
 @keyframes move {
     0% {
         transform: translate(0%);

@@ -1,0 +1,289 @@
+/* 层级记录表
+* 层级0: body
+* 层级1: navbar sidebar container
+* 层级2：maintent
+* 层级3：maintent-left maintent-right
+* 层级4：video-info  video-intro  recommend
+* 层级5：video-info-cover-img video-info-detail recommend-item
+* 层级6：vedio-info-detail-list video-info-detail-playbutton video-intro-title video-intro-text
+
+/* 小调整 */
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+
+/* 层级0 大小 */
+
+5 body {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* 层级 0 调整 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE5B6;
+}
+
+
+/* 层级1-2 大小位置 */
+
+.container {
+    width: 100%;
+    height: 93vh;
+}
+
+.maincontent {
+    width: 90%;
+    height: 95%;
+}
+
+
+/* 层级1-2 调整 */
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    /* 这个在row下是横轴，也是主轴 */
+    justify-content: flex-end;
+    /* 这个是交叉轴 */
+    align-items: flex-end;
+}
+
+.maincontent {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3vh;
+}
+
+
+/* 层级3 大小位置 */
+
+.maincontent-left {
+    width: 100%;
+    height: 100%;
+    flex-basis: 80%;
+}
+
+.maincontent-right {
+    width: 100%;
+    height: 100%;
+    flex-basis: 16%;
+}
+
+
+/* 层级3 调整 */
+
+.maincontent-left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2vh;
+}
+
+.maincontent-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+
+/* 层级4 大小位置 */
+
+.video-info {
+    width: 100%;
+    flex-basis: 50%;
+}
+
+.video-intro {
+    width: 100%;
+    flex-basis: 30%;
+}
+
+.recommend {
+    width: 100%;
+    flex-basis: 20%;
+}
+
+
+/* 层级4 调整 */
+
+.recommend {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1vh;
+    justify-content: space-around;
+    background-color: #FFFCF3;
+}
+
+.video-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3vw;
+    /* box-shadow: 0 0 10px #dbc390; */
+    /* 待修改 */
+}
+
+.video-intro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1vh;
+    background-color: #FFFCF3;
+    border: 1px solid #FFFCF3;
+}
+
+
+/* 层级5 大小位置 */
+
+.video-info-cover-img {
+    flex-basis: 25%;
+}
+
+.video-info-detail {
+    height: 90%;
+    flex-basis: 70%;
+}
+
+.video-info-detail-playbutton {
+    flex-basis: 25%;
+}
+
+.recommend-item {}
+
+
+/* 层级5 调整 */
+
+.video-info-cover-img {
+    display: flex;
+}
+
+.vedio-info-detail {
+    display: flex;
+    flex-direction: column;
+    /* gap: 2vh; */
+}
+
+.video-info-cover-img>ul>li>img {
+    height: 50vh;
+}
+
+.vedio-info-detail>ul>li>p {
+    font-family: 宋体;
+    font-size: 2.2em;
+}
+
+
+/* 影片日期, 地址 */
+
+.vedio-info-detail-list>li>p>span {
+    font-size: medium;
+    color: gray;
+}
+
+
+/* 第二个条目开始使用此样式 */
+
+.vedio-info-detail-list>li>span {
+    font-family: 宋体;
+    font-size: 1.7em;
+}
+
+.recommend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.recommend-item>img {
+    height: 128px;
+    width: 100px;
+    max-height: 128px;
+    max-width: 100px;
+}
+
+
+/* 层级6 大小 */
+
+.vedio-info-detail-list {
+    flex-basis: 65%;
+}
+
+.vedio-intro-title {
+    flex-basis: 10%;
+}
+
+.vedio-intro-text {
+    flex-basis: 90%;
+}
+
+
+/* 按钮布局 */
+
+.video-info-detail-playbutton {
+    flex-basis: 35%;
+}
+
+.video-info-detail-playbutton>input {
+    flex-basis: 25%;
+}
+
+
+/* 层级6 调整 */
+
+.video-info-detail-playbutton {
+    display: flex;
+    align-items: center;
+}
+
+.video-info-detail-playbutton>input {
+    background-color: #F9B13D;
+    line-height: 2.2em;
+    font-size: 1.9em;
+    border: 2px solid #F9B13D;
+    border-radius: 20%;
+    color: white;
+    border: none;
+}
+
+.vedio-info-detail-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2vh;
+    justify-content: space-between;
+}
+
+.video-intro-title {
+    display: flex;
+}
+
+.video-intro-title>h1 {
+    font-size: 2em;
+    font-family: 黑体;
+}
+
+.video-intro-text {
+    display: flex;
+}
+
+.video-intro-text>h2 {
+    font-size: 1.5em;
+    font-family: 楷体;
+}

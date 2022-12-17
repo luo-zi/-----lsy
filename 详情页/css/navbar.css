@@ -1,0 +1,110 @@
+/* 顶部水平导航栏 */
+
+
+/*  
+ * navbar
+ * idon movie login
+ * 
+*/
+
+
+/* 大小 位置 */
+
+.navbar {
+    width: 100vw;
+    flex-basis: 7vh;
+    flex-shrink: 0;
+}
+
+.login {
+    height: 100%;
+    width: 20%;
+    flex-basis: 15%;
+}
+
+.movie {
+    width: 35%;
+    flex-basis: 35%;
+    height: 100%;
+}
+
+#idon {
+    width: 15%;
+    flex-basis: 15%;
+    flex-shrink: 0;
+    /* 禁止自动缩小， 保护logo和网站名 */
+}
+
+
+/* 调整 */
+
+.navbar {
+    /* 为下个层次的movie 设置位置 所以写在了调整中*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fdac4e;
+    z-index: 2;
+}
+
+.navbar li a {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.movie {
+    display: flex;
+    justify-content: center;
+}
+
+#idon {
+    white-space: nowrap;
+    /* 禁止自动缩小， 保护logo和网站名 */
+}
+
+.login {
+    flex-direction: row-reverse;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.login>li {
+    flex-basis: 35%;
+    flex-shrink: 0;
+}
+
+.login>li>a {
+    white-space: nowrap;
+}
+
+.login>li {
+    flex-shrink: 0;
+}
+
+.movie button {
+    background-color: #000000;
+    font-size: 1em;
+    color: #fff;
+    /* flex-basis: 100%; */
+    flex-basis: 15%;
+    flex-shrink: 0;
+}
+
+
+/* 
+
+flex-basis: 15%; -> 默认占用15%的空间
+flex-shrink: 0; -> 不缩小, 若不设置此项, 则随着父容器变小
+==>
+使按钮占用的空间始终是15%, 因为按钮再小的话很容易变得难看
+*/
+
+.movie input {
+    flex-basis: 85%;
+    /* height: 3em; */
+    height: 100%;
+    font-size: inherit;
+    outline: none;
+    transition: all 0.3s;
+}
