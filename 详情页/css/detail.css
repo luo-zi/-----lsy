@@ -3,9 +3,9 @@
 * 层级1: navbar sidebar container
 * 层级2：maintent
 * 层级3：maintent-left maintent-right
-* 层级4：video-info  video-intro  recommend
-* 层级5：video-info-cover-img video-info-detail recommend-list recommend-title
-* 层级6：vedio-info-detail-list video-info-detail-playbutton video-intro-title video-intro-text recommend-item
+* 层级4：video-info  video-intro  recommend actor-info
+* 层级5：video-info-cover-img video-info-detail recommend-list recommend-title actor-info-title actor-info-list
+* 层级6：vedio-info-detail-list video-info-detail-playbutton video-intro-title video-intro-text recommend-item actor-info-item
 
 /* 最下方是通用样式 */
 /* 通常被用来归类多次使用并需要保证一致性的样式 */
@@ -105,7 +105,8 @@ body {
 
 .maincontent-right {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    justify-items: center;
     flex-wrap: nowrap;
 }
 
@@ -125,6 +126,9 @@ body {
 .recommend {
     width: 100%;
     flex-basis: 20%;
+}
+.actor-info{
+    flex-basis: 80%;
 }
 /* 层级4 调整 */
 
@@ -152,7 +156,12 @@ body {
     gap: 1vh;
     background-color:bisque;
 }
-
+.actor-info{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    
+}
 /* 层级5 大小位置 */
 
 .recommend-list {
@@ -176,7 +185,10 @@ body {
 .recommend-title{
     flex-basis: 10%;
 }
-
+.actor-info-list{
+    flex-basis: 90%;
+    
+}
 /* 层级5 调整 */
 
 .recommend-list {
@@ -235,6 +247,15 @@ body {
     color:gold;
     cursor: pointer;
 }
+.actor-info-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    gap: 4vh;
+    background-color: rgba(255, 228, 196, 0.686);
+}
 
 /* 层级6 大小 */
 
@@ -264,6 +285,12 @@ body {
 
 .video-info-detail-playbutton>input {
     flex-basis: 25%;
+}
+.actor-info-item{
+    width: 95%;
+    height: 20%;
+   
+   
 }
 
 
@@ -335,13 +362,39 @@ body {
     display:block;
     width: 100%;
    font-size: 0.8em;
-   background-color: #fdeda8;
+   background-color: #FFF4D7;
    /* color: rgb(69, 21, 193); */
    text-align: center;
    
 }
-
-
+.actor-info-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vh;
+    /* border-top: 0.1em solid rgb(244, 240, 243); */
+    /* border-bottom: 0.1em solid rgb(244, 240, 243); */
+    
+    
+    /* box-shadow: 0.2em 0.2em 1ch #e6d59f; */
+}
+.actor-info-title{
+    font-size: 1.2em;
+    display: block;
+    background-color: bisque;
+    border-bottom: 0.1em solid rgb(93, 81, 11);
+}
+.actor-info-item>img{
+    max-width: 70px;
+    max-height: 70px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%  50%;
+    box-shadow: 0 0 10px 10px white inset;
+    
+    
+}
 /* 各种通用样式 */
 .title{
     border-left: 0.4em solid cadetblue;
