@@ -52,7 +52,8 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #FFE5B6;
+    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(225, 173, 124, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fefcec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #FFE5B6 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgb(227, 180, 26) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal;
+    background-attachment: fixed;
 }
 
 
@@ -323,6 +324,7 @@ body {
 }
 
 .synopsis-tittle {
+    display: block;
     font-weight: bold;
     font-size: 2em;
 }
@@ -427,3 +429,4 @@ li {
 li a {
     text-decoration: none;
 }
+
