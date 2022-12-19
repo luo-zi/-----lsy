@@ -7,6 +7,11 @@
 * 层级5：video-info-cover-img video-info-detail recommend-list recommend-title
 * 层级6：vedio-info-detail-list video-info-detail-playbutton video-intro-title video-intro-text recommend-item
 
+/* 最下方是通用样式 */
+/* 通常被用来归类多次使用并需要保证一致性的样式 */
+/* 
+* title: 为文字左边加上竖条, 需要标签的display为block
+*/
 /* 小调整 */
 
 li {
@@ -36,7 +41,10 @@ li a {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #FFE5B6;
+    /* background-color: #FFE5B6; */
+    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(225, 173, 124, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fefcec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #FFE5B6 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgb(227, 180, 26) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal;
+    background-attachment: fixed;
+
 }
 
 
@@ -76,13 +84,13 @@ body {
 .maincontent-left {
     width: 100%;
     height: 100%;
-    flex-basis: 80%;
+    flex-basis: 65%;
 }
 
 .maincontent-right {
     width: 100%;
     height: 100%;
-    flex-basis: 16%;
+    flex-basis: 25%;
 }
 
 
@@ -124,8 +132,8 @@ body {
     display: flex;
     justify-content: flex-start;
     gap: 3vw;
-    /* box-shadow: 0 0 10px #dbc390; */
-    /* 待修改 */
+    box-shadow: 0 0 10px #dbc390;
+    background-color:bisque;
 }
 
 .video-intro {
@@ -133,11 +141,17 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1vh;
-    /* background-color: #FFFCF3; */
+    background-color:bisque;
     /* border: 1px solid #FFFCF3; */
     
 }
-
+.recommend{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vh;
+    background-color:bisque;
+}
 
 /* 层级5 大小位置 */
 
@@ -168,16 +182,17 @@ body {
 .recommend-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 48%);
+    grid-template-rows: repeat(2, 1fr);
     row-gap: 1vh;
     place-content: center center;
     place-items: center center;
     /* background-color: #FFFCF3; */
     box-shadow: 0 0 10px #dbc390;
 }
-.recommend-title{
-    line-height: 2.2em;
+.recommend-title>h1{
+    /* line-height: 2em; */
     font-size: 2em;
+    white-space: nowrap;
 }
 .video-info-cover-img {
     display: flex;
@@ -205,6 +220,7 @@ body {
 .vedio-info-detail-list>li>p>span {
     font-size: medium;
     color: gray;
+    white-space: nowrap;
 }
 
 
@@ -212,9 +228,13 @@ body {
 
 .vedio-info-detail-list>li>span {
     font-family: 宋体;
-    font-size: 1.7em;
+    font-size: 1.2em;
 }
-
+.video-info-detail-playbutton>input:hover{
+    background-color:#cd8715;
+    color:gold;
+    cursor: pointer;
+}
 
 /* 层级6 大小 */
 
@@ -274,6 +294,7 @@ body {
 
 .video-intro-title {
     display: flex;
+   
 }
 
 .video-intro-title>h1 {
@@ -284,11 +305,15 @@ body {
 .video-intro-text {
     display: flex;
     box-shadow: 0 0 10px #dbc390;
+    
 }
 
 .video-intro-text>h2 {
-    font-size: 1.5em;
+    font-weight: lighter;
+    font-size: 1em;
     font-family: 楷体;
+    padding: 0.5em;
+    /* text-indent: 1.2em; */
 }
 
 .recommend-item {
@@ -297,7 +322,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 1vh;
-    box-shadow: 0.5em 0.5em 1ch #dbc390;
+    box-shadow: 0.2em 0.2em 1ch #e6d59f;
 }
 
 .recommend-item>img {
@@ -310,6 +335,15 @@ body {
     display:block;
     width: 100%;
    font-size: 0.8em;
-   background-color: rgb(240, 250, 138);
+   background-color: #fdeda8;
+   /* color: rgb(69, 21, 193); */
    text-align: center;
+   
+}
+
+
+/* 各种通用样式 */
+.title{
+    border-left: 0.4em solid cadetblue;
+    
 }
