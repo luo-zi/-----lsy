@@ -4,8 +4,8 @@
 * 层级2：maintent
 * 层级3：maintent-left maintent-right
 * 层级4：video-info  video-intro  recommend
-* 层级5：video-info-cover-img video-info-detail recommend-item
-* 层级6：vedio-info-detail-list video-info-detail-playbutton video-intro-title video-intro-text
+* 层级5：video-info-cover-img video-info-detail recommend-list recommend-title
+* 层级6：vedio-info-detail-list video-info-detail-playbutton video-intro-title video-intro-text recommend-item
 
 /* 小调整 */
 
@@ -118,18 +118,7 @@ body {
     width: 100%;
     flex-basis: 20%;
 }
-
-
 /* 层级4 调整 */
-
-.recommend {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 1vh;
-    justify-content: space-around;
-    background-color: #FFFCF3;
-}
 
 .video-info {
     display: flex;
@@ -144,12 +133,19 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 1vh;
-    background-color: #FFFCF3;
-    border: 1px solid #FFFCF3;
+    /* background-color: #FFFCF3; */
+    /* border: 1px solid #FFFCF3; */
+    
 }
 
 
 /* 层级5 大小位置 */
+
+.recommend-list {
+    width: 100%;
+    flex-basis: 90%;
+    height: 50vh;
+}
 
 .video-info-cover-img {
     flex-basis: 25%;
@@ -163,12 +159,26 @@ body {
 .video-info-detail-playbutton {
     flex-basis: 25%;
 }
-
-.recommend-item {}
-
+.recommend-title{
+    flex-basis: 10%;
+}
 
 /* 层级5 调整 */
 
+.recommend-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 48%);
+    row-gap: 1vh;
+    place-content: center center;
+    place-items: center center;
+    /* background-color: #FFFCF3; */
+    box-shadow: 0 0 10px #dbc390;
+}
+.recommend-title{
+    line-height: 2.2em;
+    font-size: 2em;
+}
 .video-info-cover-img {
     display: flex;
 }
@@ -177,6 +187,7 @@ body {
     display: flex;
     flex-direction: column;
     /* gap: 2vh; */
+    
 }
 
 .video-info-cover-img>ul>li>img {
@@ -204,22 +215,13 @@ body {
     font-size: 1.7em;
 }
 
-.recommend-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1vh;
-}
-
-.recommend-item>img {
-    height: 128px;
-    width: 100px;
-    max-height: 128px;
-    max-width: 100px;
-}
-
 
 /* 层级6 大小 */
+
+.recommend-item {
+    width: auto;
+    height: auto;
+}
 
 .vedio-info-detail-list {
     flex-basis: 65%;
@@ -281,9 +283,33 @@ body {
 
 .video-intro-text {
     display: flex;
+    box-shadow: 0 0 10px #dbc390;
 }
 
 .video-intro-text>h2 {
     font-size: 1.5em;
     font-family: 楷体;
+}
+
+.recommend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    box-shadow: 0.5em 0.5em 1ch #dbc390;
+}
+
+.recommend-item>img {
+    height: 128px;
+    width: 100px;
+    max-height: 128px;
+    max-width: 100px;
+}
+.recommend-item>a {
+    display:block;
+    width: 100%;
+   font-size: 0.8em;
+   background-color: rgb(240, 250, 138);
+   text-align: center;
 }
