@@ -380,6 +380,7 @@ body {
     /* box-shadow: 0.2em 0.2em 1ch #e6d59f; */
 }
 .actor-info-title{
+    white-space: nowrap;
     font-size: 1.2em;
     display: block;
     background-color: bisque;
