@@ -1,0 +1,35 @@
+
+@media all and (max-width: 768px){
+    .sidebar{
+        display: none;
+    }
+    .mainContent{
+        flex-basis: 100%;
+    }
+    .video-area{
+        width: 90%;
+        flex-direction: column;
+    }
+    .video-player{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        
+    }
+}
+
+@media all and (max-width: 550px){
+    #idon{
+        display: none;
+    }
+    .movie{
+        flex-basis: 60%;
+    }
+    
+   
+}
+@media all and (max-width: 375px){
+  
+}
+
+
