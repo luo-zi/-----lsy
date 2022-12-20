@@ -10,7 +10,7 @@
     }
 }
 @media all and (max-width: 768px){
-    .synopsis-content>li>p{
+    .synopsis-content>li>a>p{
         font-size: 0.5em;
     }
     .list-content{
