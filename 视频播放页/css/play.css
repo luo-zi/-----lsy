@@ -1,0 +1,179 @@
+
+/* 层次表
+ * 0: body
+ * 1: container
+ * 2: mainContent 
+ * 3: video-area commend-area
+ * 4: video-player episode-area commend-title commend-input
+ * 5: episode-title episode-list 
+ */
+body {
+    height: 100%;
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #FFE5B6; */
+    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(225, 173, 124, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fefcec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #FFE5B6 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgb(227, 180, 26) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); background-blend-mode: normal, normal, screen, overlay, normal;
+    background-attachment: fixed;
+
+}
+li{
+    list-style-type: none;
+}
+li>a{
+   text-decoration: none;
+}
+
+/* 层级 1 大小位置 */
+.container{
+    width: 100%;
+    height: 93vh;
+}
+/* 层级 1 调整 */
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    /* 这个是交叉轴 */
+    align-items: center;
+}
+
+/* 层级 2 大小位置 */
+.mainContent{
+    flex-basis: 85%;
+    height: 93vh;
+}
+/* 层级 2 调整 */
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+    /* gap: 2vh; */
+}
+/* 层级 3 大小位置 */
+.video-area{
+    height: 70vh;
+    flex-grow: 0;
+    width: 100%;
+}
+.commend-area{
+    flex-basis: 30%;
+    /* height: ; */
+}
+/* 层级3 调整 */
+.video-area{
+    display: flex;
+    column-gap: 2vw;;
+    
+}
+/* 层级 4 大小位置 */
+.video-player{
+    max-width: 80%;
+    /* min-width: 50%; */
+    max-height: 100%;
+    /* min-height: 100%; */ 
+    height: 100%;
+    width: auto;
+    flex-basis: 70%;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+}
+.episode-area{
+    flex-basis: 30%;
+    flex-grow: 0;
+    height: 100%;
+    max-height: 100%;
+    flex-shrink: 3;
+}
+/* 层级 4 调整 */
+.episode-area{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+/* 层级5 大小位置 */
+.episode-title{
+    width: 100%;
+}
+.episode-list{
+    width: 100%;
+    height: 100%;
+    /* flex-basis: 20%; */
+    flex-shrink: 0;
+    min-width: 4.5em;
+    /* max-width: 9em; */
+    max-height: 90%;
+}
+/* 层级 5 调整 */
+.episode-title{
+    display: block;
+    text-align:left;
+    line-height: 1.8em;
+    font-size: 1.3em;
+    border-left: 0.1rem solid #f7d463;
+    /* background-color: bisque; */
+    white-space: nowrap;
+}
+.episode-list{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    row-gap: 0.5vh;
+    /* column-gap: 0.9vw; */
+    /* padding: 1.2vw; */
+
+    justify-content: first baseline;
+    /* justify-items: center; */
+    /* /* align-items: center; */
+    /* align-content: center;  */
+    background-color: rgba(246, 182, 44, 0.141);
+    border-bottom: 0.1rem solid #f7d463;
+    border-top: 0.1rem solid #f7d463;
+    
+}
+.episode-list>li{
+    display: flex;
+    column-gap: 0.7vw;
+    width: 100%;
+    height: 2.3rem;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 0.1rem solid rgba(61, 231, 214, 0.592); */
+    background-color: rgba(250, 184, 41, 0.962);
+    box-shadow: 0 0 10px #dbc390;
+    color: rgb(255, 255, 227);
+    white-space: nowrap;
+}
+.episode-list>li:hover{
+    background-color: rgb(193, 142, 72);
+    box-shadow: 0 0 10px #dbc390;
+    cursor: pointer;
+}
+.episode-list>li>a{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: rgb(231, 123, 40);
+   
+    
+}
+
+.episode-list>li>a:hover{
+    color: rgb(255, 204, 36);
+}
+.episode-list>li>span{
+    text-indent: 1em;
+    text-align: center;
+    white-space: nowrap;
+}

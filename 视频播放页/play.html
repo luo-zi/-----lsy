@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/play.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<body>
+    <header class="navbar">
+        <!-- 顶部横条代码 -->
+        <div id="idon"><span class="fa fa-play-circle fa-3x">&nbsp影酷</span></div>
+        <div class="movie">
+
+            <input type="search" name="" id="" placeholder="请输入影片关键词" list="hot">
+            <datalist id="hot">
+                <option value="人世间">
+                <option value="消失的孩子">
+                <option value="掌上之物">
+                <option value="同学今天很和睦">
+                <option value="爱的二八定律">
+              </datalist>
+            <button type="button">搜索</button>
+
+        </div>
+        <!-- <div> -->
+        <ul class="login">
+            <li><a href="#" target="_blank" style="color: black;">登录</a></li>
+            &nbsp;&nbsp;
+            <li><a href="#" target="_blank" style="color: black;">观看历史</a></li>
+
+
+        </ul>
+        <!-- </div> -->
+    </header>
+    <ul class="sidebar">
+        <li><a class="active" href="#home">首页</a></li>
+        <li><a href="#hottest">最热</a></li>
+        <li><a href="#latest">最新</a></li>
+        <li><a href="#movie">电影</a></li>
+        <li><a href="#teleplay">电视剧</a></li>
+        <li><a href="#anime">动漫</a></li>
+    </ul>
+    <!--  层级 1 -->
+    <article class="container">
+        <!-- 层级 2 -->
+        <div class="mainContent">
+            <!-- 层级 3 -->
+            <div class="video-area">
+                <!-- 播放器 -->
+                <!-- 层级 4 -->
+                <video src="" class="video-player" controls></video>
+                <div class="episode-area">
+                    <!-- 层级 5 -->
+                    <h1 class="episode-title">&nbsp;剧集列表</h1>
+                    <ul class="episode-list">
+                        <li><span>第一集&nbsp;开端</span><a href="" class="	fa fa-play"></a></li>
+                        <li><span>第一集&nbsp;开端</span><a href="" class="	fa fa-play"></a></li>
+                        <li><span>第一集&nbsp;开端</span><a href="" class="	fa fa-play"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="commend-area">
+                <h1 class="commend-title"></h1>
+                <input type="text" name="" id="" class="commend-input">
+                
+            </div> -->
+        </div>
+    </article>
+</body>
+</html>
