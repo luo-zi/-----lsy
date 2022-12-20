@@ -102,6 +102,9 @@ li>a{
     flex-direction: column;
     row-gap: 1vh;
 }
+.video-player{
+    box-shadow: 0 0 10px #7b5c1b;
+}
 /* 层级5 大小位置 */
 .episode-title{
     width: 100%;
@@ -138,7 +141,7 @@ li>a{
     /* /* align-items: center; */
     /* align-content: center;  */
     background-color: rgba(246, 182, 44, 0.141);
-    border-bottom: 0.1rem solid #f7d463;
+    /* border-bottom: 0.1rem solid #f7d463; */
     border-top: 0.1rem solid #f7d463;
     
 }
