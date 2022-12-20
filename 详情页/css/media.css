@@ -1,3 +1,9 @@
+
+@media all and (max-width: 768px){
+    .recommend{
+        row-gap: 5vh;
+    }
+}
 @media all and (max-width: 634px){
     .sidebar{
         display: none;
@@ -7,12 +13,7 @@
     }
 
 }
-@media all and (max-width: 375px){
-  .vedio-info-detail-list>li>span{
-    font-size: 0.6em;
-  }
-    
-}
+
 @media all and (max-width: 550px){
     #idon{
         display: none;
@@ -59,10 +60,11 @@
 
     }
 }
-@media all and (max-width: 768px){
-    .recommend{
-        row-gap: 5vh;
-    }
+@media all and (max-width: 375px){
+  .vedio-info-detail-list>li>span{
+    font-size: 0.6em;
+  }
+    
 }
 
 
