@@ -418,7 +418,12 @@ body {
     vertical-align: middle;
     line-height: 1.5em;
 }
-
+.synopsis-content>li{
+    transition: background-color 0.4s;
+}
+.synopsis-content>li:hover{
+    background-color: rgba(244, 168, 83, 0.899);
+}
 
 /* 各种小调整 */
 
