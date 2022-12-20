@@ -1,0 +1,44 @@
+@media all and (max-width: 634px){
+    .sidebar{
+        display: none;
+    }
+    .recommend{
+        width: 100%;
+    }
+    .lunbo{
+        width: 100%;
+    }
+}
+@media all and (max-width: 768px){
+    .synopsis-content>li>p{
+        font-size: 0.5em;
+    }
+    .list-content{
+        font-size: 0.5em;
+    }
+    
+}
+@media all and (max-width: 550px){
+    #idon{
+        display: none;
+    }
+    .movie{
+        flex-basis: 60%;
+    }
+    .recommend{
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+    .list-content>ol{
+        width: 100%;
+    }
+    .mainContent-bottom:first-child{
+        display: none;
+    }
+    .empty{
+        display: none;
+    }
+    .list{
+        width: 100%;
+    }
+}
